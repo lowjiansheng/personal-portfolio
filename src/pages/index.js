@@ -1,21 +1,43 @@
 import React from "react"
-import { Link } from "gatsby"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+
 import SEO from "../components/seo"
+import ProfileImage from "../components/profileImage"
+import SocialMedia from "../components/socialMedia"
+import Resume from "./../components/resume"
+
+const styles = {
+  container: {
+    height: "100vh",
+  },
+}
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <SEO title="Low Jian Sheng" />
+    <div className="container d-flex" style={styles.container}>
+      <div className="col align-self-center">
+        <div className="row justify-content-center">
+          <div style={{ maxWidth: `200px`, marginBottom: `1.45rem` }}>
+            <ProfileImage />
+          </div>
+        </div>
+        <div className="row justify-content-center">
+          <h1>Low Jian Sheng</h1>
+        </div>
+        <div className="row justify-content-center">
+          <p>Software Engineer in Singapore</p>
+        </div>
+        <div className="row justify-content-center">
+          <Resume />
+        </div>
+        <div className="row justify-content-center">
+          <SocialMedia />
+        </div>
+      </div>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
 )
 
