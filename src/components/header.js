@@ -2,13 +2,16 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
+import TagManager from "react-gtm-module"
+
+const tagManagerArgs = {
+  gtmId: "UA-171612804-1"
+}
+
+const Header = ({ siteTitle }) => {
+  TagManager.initialize(tagManagerArgs)
+  return (
+  <header>
     <div
       style={{
         margin: `0 auto`,
@@ -28,6 +31,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </div>
+
     <script
       src="https://unpkg.com/react/umd/react.production.min.js"
       crossorigin
@@ -45,7 +49,7 @@ const Header = ({ siteTitle }) => (
 
     <script>var Alert = ReactBootstrap.Alert;</script>
   </header>
-)
+)}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
