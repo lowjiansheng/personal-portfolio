@@ -25,6 +25,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Header />
       <div
         style={{
           margin: `0 auto`,
