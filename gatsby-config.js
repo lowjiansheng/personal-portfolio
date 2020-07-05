@@ -27,6 +27,20 @@ module.exports = {
         icon: `src/images/favicon-32x32.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: `UA-171612804-1`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-171612804-1`,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
