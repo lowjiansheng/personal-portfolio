@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import ProfileImage from "../components/profileImage"
 import SocialMedia from "../components/socialMedia"
 import Resume from "./../components/resume"
+import About from "../components/about"
 
 const styles = {
   container: {
@@ -35,6 +36,9 @@ const IndexPage = () => (
         </div>
         <div className="row justify-content-center">
           <SocialMedia />
+        </div>
+        <div className="row justify-content-center">
+          <About />
         </div>
       </div>
     </div>
