@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import ProfileImage from "../components/profileImage"
 import SocialMedia from "../components/socialMedia"
 import Resume from "./../components/resume"
+import { Link } from "gatsby"
 
 const styles = {
   container: {
@@ -32,6 +33,7 @@ const IndexPage = () => (
         </div>
         <div className="row justify-content-center">
           <Resume />
+          <Link to="/blog"> Blog </Link>
         </div>
         <div className="row justify-content-center">
           <SocialMedia />
