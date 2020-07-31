@@ -6,6 +6,8 @@ import { rhythm } from "../utils/typography"
 const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
   const blogTitle = data.site.siteMetadata.blogtitle
+  const children = <Link to="/">Back to main</Link>
+
   return (
     <BlogLayout location={location} title={blogTitle}>
       {posts.map(({ node }) => {

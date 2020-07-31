@@ -57,7 +57,10 @@ const BlogLayout = ({ location, title, children }) => {
       }}
     >
       <header>{header}</header>
-      <main>{children}</main>
+      <Link to="/" style={{ boxShadow: `none` }}>
+        Back to main
+      </Link>
+      <main style={{ paddingTop: "5%" }}>{children}</main>
       <footer></footer>
     </div>
   )
