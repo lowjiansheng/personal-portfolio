@@ -5,8 +5,9 @@ import { rhythm } from "../utils/typography"
 
 const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
+  const blogTitle = data.site.siteMetadata.blogtitle
   return (
-    <BlogLayout location={location}>
+    <BlogLayout location={location} title={blogTitle}>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
@@ -41,6 +42,11 @@ export default BlogIndex
 
 export const pageQuery = graphql`
   query {
+    site {
+      siteMetadata {
+        blogtitle
+      }
+    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {

@@ -15,32 +15,35 @@ const styles = {
   },
 }
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Low Jian Sheng" />
-    <div className="container d-flex" style={styles.container}>
-      <div className="col align-self-center">
-        <div className="row justify-content-center">
-          <div style={{ maxWidth: `200px`, marginBottom: `1.45rem` }}>
-            <ProfileImage />
+const IndexPage = () => {
+  return (
+    <Layout>
+      <SEO title="Low Jian Sheng" />
+      <div className="container d-flex" style={styles.container}>
+        <div className="col align-self-center">
+          <div className="row justify-content-center">
+            <div style={{ maxWidth: `200px`, marginBottom: `1.45rem` }}>
+              <ProfileImage />
+            </div>
+          </div>
+          <div className="row justify-content-center">
+            <h1>Low Jian Sheng</h1>
+          </div>
+          <div className="row justify-content-center">
+            <p>Software Engineer in Singapore</p>
+          </div>
+          <div className="row justify-content-center">
+            <Link to="/blog" style={{ boxShadow: `none` }}>
+              Occassionally I write here
+            </Link>
+          </div>
+          <div className="row justify-content-center">
+            <SocialMedia />
           </div>
         </div>
-        <div className="row justify-content-center">
-          <h1>Low Jian Sheng</h1>
-        </div>
-        <div className="row justify-content-center">
-          <p>Software Engineer in Singapore</p>
-        </div>
-        <div className="row justify-content-center">
-          <Resume />
-          <Link to="/blog"> Blog </Link>
-        </div>
-        <div className="row justify-content-center">
-          <SocialMedia />
-        </div>
       </div>
-    </div>
-  </Layout>
-)
+    </Layout>
+  )
+}
 
 export default IndexPage

@@ -9,8 +9,9 @@ const Resume = () => {
     <OutboundLink
       href="https://drive.google.com/file/d/13vh4VPMfp5ASGZI4Y--lvgcQ9KwlB0go/view?usp=sharing"
       className="resume-text"
+      style={{ boxShadow: `none` }}
     >
-      <img src={resumeSvg} className="resume" /> Resume
+      <img src={resumeSvg} className="resume" />
     </OutboundLink>
   )
 }

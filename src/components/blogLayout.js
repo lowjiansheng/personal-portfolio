@@ -21,7 +21,7 @@ const BlogLayout = ({ location, title, children }) => {
             boxShadow: `none`,
             color: `inherit`,
           }}
-          to={`/`}
+          to={`/blog`}
         >
           {title}
         </Link>
@@ -40,7 +40,7 @@ const BlogLayout = ({ location, title, children }) => {
             boxShadow: `none`,
             color: `inherit`,
           }}
-          to={`/`}
+          to={`/blog`}
         >
           {title}
         </Link>
@@ -58,11 +58,7 @@ const BlogLayout = ({ location, title, children }) => {
     >
       <header>{header}</header>
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      <footer></footer>
     </div>
   )
 }
