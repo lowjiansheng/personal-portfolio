@@ -4,9 +4,9 @@ import { Link } from "gatsby"
 import { rhythm, scale } from "../utils/typography"
 
 const BlogLayout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
+  const rootPath = `/blog`
   let header
-
+  console.log(location.pathname)
   if (location.pathname === rootPath) {
     header = (
       <h1

@@ -1,13 +1,14 @@
 ---
-title: I used Gatsby and Netlify to develop my personal site in less than 3 hours
+title: I used GatsbyJS and Netlify to develop my personal site in less than 3 hours
 date: "2020-07-04T22:12:03.284Z"
+slug: gatsby-personal-side
 ---
 
 I've been thinking of developing my personal site for many months now, but have been putting that idea off due to procrastination (haven't we all). It was until I discovered Gatsby and Netlify. I realised that it actually doesn't require a lot of effort to do so.
 
 For those of you who have not heard of Gatsby, it's basically a framework for building fast static sites using ReactJS. As compared to server rendered websites, static sites are much faster as all assets are bundled at build time and served to the client. This is the perfect setup for my use case.
 
-# Setting up Gatsby
+## Setting up Gatsby
 
 To install Gatsby on your computer, make sure you have npm already installed on your computer. If not, you can install it by running `brew install npm`.
 
@@ -17,7 +18,7 @@ Once that's done, run `gatsby new {project-name}` and it will automatically popu
 
 The Gatsby folder structure is very similar to a normal react project. Most of the important `.js` files are located inside the src folder. Once the project is set up, probably the first things you'll notice are the 4 `gatsby-*` files. These are gatsby data files which contains important information which will be populated onto your site.
 
-# Updating web configs
+## Updating web configs
 
 For our purposes, the main file to update would be `gatsby-config.js`. This file contains all the metadata for the project such as your site name. You can make the appropriate changes here that suits your site.
 
@@ -32,7 +33,7 @@ module.exports = {
 
 In the file, you'll see another field called plugins. Gatsby allows you to add more functionalities to your side with pre-built plugins. You can find more information here in their [documentation](https://www.gatsbyjs.org/docs/plugins/). For our use case, we will not be making any modifications to this.
 
-# Designing the page
+## Designing the page
 
 Let's now move on to the actual design of the site.
 
@@ -40,7 +41,7 @@ All of your page files are located in `src/pages` folder. For our very simple po
 
 To see the effects of the current code, go to your terminal and run the command `gatsby develop`. It will spin up the web server and you'll be able to view the changes in localhost:8000.
 
-![Untitled.png](./untitled.png)
+![gatsby1.png](./gatsby1.png)
 
 And here you go! Now we'll just need to modify it a little bit to fit our use case.
 
@@ -75,7 +76,7 @@ export default IndexPage
 
 I've moved the image up and put my name and title at the bottom.
 
-![I%20used%20Gatsby%20and%20Netlify%20to%20develop%20my%20personal%20s%2032936287852347eb8d6bd57d62c81bed/Untitled%201.png](I%20used%20Gatsby%20and%20Netlify%20to%20develop%20my%20personal%20s%2032936287852347eb8d6bd57d62c81bed/Untitled%201.png)
+![gatsby2.png](gatsby2.png)
 
 This is still not close to the personal portfolio site that I envision myself having. I don't like the huge purple banner on top, the Gatsby copyright at the bottom and definitely that spaceman is not me.
 
@@ -103,7 +104,7 @@ return (
 
 In the return code, I've completely removed any traces of the header and footer. What remains is simply the body (`index.js`).
 
-![I%20used%20Gatsby%20and%20Netlify%20to%20develop%20my%20personal%20s%2032936287852347eb8d6bd57d62c81bed/Untitled%202.png](I%20used%20Gatsby%20and%20Netlify%20to%20develop%20my%20personal%20s%2032936287852347eb8d6bd57d62c81bed/Untitled%202.png)
+![gatsby3.png](gatsby3.png)
 
 This is the cleaner and more minimalist look that I want. To change the image, we can add our image asset into the `src/images` file. Have you noticed that in Gatsby as compared to normal react projects, we don't put the asset files in the public (compiled) folder. This is one of the charms of Gatsby. To understand more about it, I'd suggest you head over to Gatsby's documentation for their explanation. The high level idea is that this allows for clearer file organisation for the developer as well as cleaner import paths.
 
@@ -139,7 +140,7 @@ const ProfileImage = () => {
 export default ProfileImage
 ```
 
-![I%20used%20Gatsby%20and%20Netlify%20to%20develop%20my%20personal%20s%2032936287852347eb8d6bd57d62c81bed/Untitled%203.png](I%20used%20Gatsby%20and%20Netlify%20to%20develop%20my%20personal%20s%2032936287852347eb8d6bd57d62c81bed/Untitled%203.png)
+![gatsby4.png](gatsby4.png)
 
 The final part to do is to align the components in the page correctly. To do that, I choose to use flexbox as it offers a lot of flexibility and control. There is a very concise [cheatsheet about flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) that I suggest you read about before implementing this.
 
@@ -181,11 +182,11 @@ const IndexPage = () => (
 export default IndexPage
 ```
 
-![I%20used%20Gatsby%20and%20Netlify%20to%20develop%20my%20personal%20s%2032936287852347eb8d6bd57d62c81bed/Untitled%204.png](I%20used%20Gatsby%20and%20Netlify%20to%20develop%20my%20personal%20s%2032936287852347eb8d6bd57d62c81bed/Untitled%204.png)
+![gatsby5.png](gatsby5.png)
 
 That's it! You can choose to add more information or design it to however way you'd like with simple ReactJS code. It'll be good to add some links to your social media accounts or resume here.
 
-# Deployment
+## Deployment
 
 For deployment, I chose to use Netlify as it's really simple and straightforward to do so. First head over to [Netlify's website](https://www.netlify.com/) and create an account with them. There are a few ways to deploy your site, but the method I prefer is through their CLI. To install their CLI, run the command `npm install netlify-cli -g`.
 
