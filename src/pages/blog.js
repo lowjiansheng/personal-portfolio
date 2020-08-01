@@ -17,35 +17,35 @@ const BlogIndex = ({ data, location }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <Card className="blog-card">
-            <Card.Body>
-              <article key={node.fields.slug}>
-                <header>
-                  <h3
-                    style={{
-                      marginBottom: rhythm(1 / 4),
-                    }}
-                  >
-                    <Link
+            <Link
+              style={{
+                boxShadow: `none`,
+                color: `black`,
+              }}
+              to={node.fields.slug}
+            >
+              <Card.Body>
+                <article key={node.fields.slug}>
+                  <header>
+                    <h3
                       style={{
-                        boxShadow: `none`,
-                        color: `black`,
+                        marginBottom: rhythm(1 / 4),
                       }}
-                      to={node.fields.slug}
                     >
                       {title}
-                    </Link>
-                  </h3>
-                  <small>{node.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt,
-                    }}
-                  />
-                </section>
-              </article>
-            </Card.Body>
+                    </h3>
+                    <small>{node.frontmatter.date}</small>
+                  </header>
+                  <section>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: node.frontmatter.description || node.excerpt,
+                      }}
+                    />
+                  </section>
+                </article>
+              </Card.Body>
+            </Link>
           </Card>
         )
       })}
