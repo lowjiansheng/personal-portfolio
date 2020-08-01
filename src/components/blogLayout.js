@@ -31,7 +31,7 @@ const BlogLayout = ({ location, title, children }) => {
     )
     linkMain = (
       <Link to="/" style={{ color: `black` }}>
-        Back to main
+        ← Back to main
       </Link>
     )
   } else {

@@ -33,8 +33,8 @@ const IndexPage = () => {
             <p>Software Engineer in Singapore</p>
           </div>
           <div className="row justify-content-center">
-            <Link to="/blog" style={{ boxShadow: `none` }}>
-              Occassionally I write here
+            <Link to="/blog" style={{ boxShadow: `none`, color: `black` }}>
+              Occasionally I write
             </Link>
           </div>
           <div className="row justify-content-center">
