@@ -6,14 +6,16 @@ import { rhythm, scale } from "../utils/typography"
 const BlogLayout = ({ location, title, children }) => {
   const rootPath = `/blog`
   let header
+  let linkMain
   console.log(location.pathname)
   if (location.pathname === rootPath) {
     header = (
       <h1
         style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
+          ...scale(1.0),
+          marginBottom: rhythm(1.0),
           marginTop: 0,
+          textAlign: `center`,
         }}
       >
         <Link
@@ -26,6 +28,11 @@ const BlogLayout = ({ location, title, children }) => {
           {title}
         </Link>
       </h1>
+    )
+    linkMain = (
+      <Link to="/" style={{ color: `black` }}>
+        Back to main
+      </Link>
     )
   } else {
     header = (
@@ -56,11 +63,9 @@ const BlogLayout = ({ location, title, children }) => {
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
+      {linkMain}
       <header>{header}</header>
-      <Link to="/" style={{ boxShadow: `none` }}>
-        Back to main
-      </Link>
-      <main style={{ paddingTop: "5%" }}>{children}</main>
+      <main>{children}</main>
       <footer></footer>
     </div>
   )

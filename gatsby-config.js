@@ -3,7 +3,7 @@ module.exports = {
     title: `Low Jian Sheng`,
     description: `Hi, I'm Jian Sheng. You can call me JS.`,
     author: `@lowjiansheng`,
-    blogtitle: `JS's Writings`,
+    blogtitle: `Blog Articles`,
   },
   plugins: [
     {

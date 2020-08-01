@@ -1,7 +1,7 @@
 ---
 title: I used GatsbyJS and Netlify to develop my personal site in less than 3 hours
 date: "2020-07-04T22:12:03.284Z"
-slug: gatsby-personal-side
+description: ""
 ---
 
 I've been thinking of developing my personal site for many months now, but have been putting that idea off due to procrastination (haven't we all). It was until I discovered Gatsby and Netlify. I realised that it actually doesn't require a lot of effort to do so.

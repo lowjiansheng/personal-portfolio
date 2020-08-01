@@ -3,16 +3,15 @@ import { Link, graphql } from "gatsby"
 
 import BlogLayout from "../components/blogLayout"
 import SEO from "../components/seo"
-//import { rhythm, scale } from "../utils/typography"
+import { rhythm, scale } from "../utils/typography"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
-  //const siteTitle = data.site.siteMetadata.title
-  const siteTitle = "JS"
+  const blogTitle = data.site.siteMetadata.blogtitle
   const { previous, next } = pageContext
 
   return (
-    <BlogLayout location={location} title={siteTitle}>
+    <BlogLayout location={location} title={blogTitle}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -21,7 +20,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <header>
           <h1
             style={{
-              marginBottom: 0,
+              marginTop: rhythm(1.0),
+              marginBottom: rhythm(0.5),
+              fontFamily: `Montserrat, sans-serif`,
+              fontSize: `40px`,
             }}
           >
             {post.frontmatter.title}
@@ -29,6 +31,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <p
             style={{
               display: `block`,
+              marginBottom: rhythm(1.0),
             }}
           >
             {post.frontmatter.date}
@@ -73,6 +76,11 @@ export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
+    site {
+      siteMetadata {
+        blogtitle
+      }
+    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)

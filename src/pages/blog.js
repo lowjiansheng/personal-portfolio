@@ -25,7 +25,13 @@ const BlogIndex = ({ data, location }) => {
                       marginBottom: rhythm(1 / 4),
                     }}
                   >
-                    <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                    <Link
+                      style={{
+                        boxShadow: `none`,
+                        color: `black`,
+                      }}
+                      to={node.fields.slug}
+                    >
                       {title}
                     </Link>
                   </h3>
@@ -47,15 +53,8 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
-
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        blogtitle
-      }
-    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
@@ -71,5 +70,11 @@ export const pageQuery = graphql`
         }
       }
     }
+    site {
+      siteMetadata {
+        blogtitle
+      }
+    }
   }
 `
+export default BlogIndex
