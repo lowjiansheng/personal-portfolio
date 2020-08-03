@@ -6,8 +6,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ProfileImage from "../components/profileImage"
 import SocialMedia from "../components/socialMedia"
-import Resume from "./../components/resume"
 import { Link } from "gatsby"
+
+import "./index.css"
 
 const styles = {
   container: {
@@ -34,7 +35,7 @@ const IndexPage = () => {
           </div>
           <div className="row justify-content-center">
             <Link to="/blog" style={{ boxShadow: `none`, color: `black` }}>
-              Occasionally I write
+              <div className="blog-link">Occasionally I write here</div>
             </Link>
           </div>
           <div className="row justify-content-center">
