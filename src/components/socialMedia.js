@@ -18,31 +18,31 @@ const SocialMedia = () => {
         href="https://github.com/lowjiansheng"
         style={{ boxShadow: `none` }}
       >
-        <img src={githubSvg} className="social-media" />
+        <img src={githubSvg} className="social-media" title="Github" />
       </OutboundLink>
       <OutboundLink
-        href="mailto:lowjiansheng@hotmail.sg"
+        href="mailto:lowjiansheng94@gmail.com"
         style={{ boxShadow: `none` }}
       >
-        <img src={mailSvg} className="social-media" />
+        <img src={mailSvg} className="social-media" title="Email" />
       </OutboundLink>
       <OutboundLink
         href="https://medium.com/@lowjiansheng"
         style={{ boxShadow: `none` }}
       >
-        <img src={mediumSvg} className="social-media" />
+        <img src={mediumSvg} className="social-media" title="Medium" />
       </OutboundLink>
       <OutboundLink
         href="https://twitter.com/lowjiansheng"
         style={{ boxShadow: `none` }}
       >
-        <img src={twitterSvg} className="social-media" />
+        <img src={twitterSvg} className="social-media" title="Twitter" />
       </OutboundLink>
       <OutboundLink
         href="https://www.linkedin.com/in/jian-sheng-low-310b04131/"
         style={{ boxShadow: `none` }}
       >
-        <img src={linkedInSvg} className="social-media" />
+        <img src={linkedInSvg} className="social-media" title="LinkedIn" />
       </OutboundLink>
     </div>
   )

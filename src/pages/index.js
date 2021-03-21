@@ -31,7 +31,10 @@ const IndexPage = () => {
             <h1>Low Jian Sheng</h1>
           </div>
           <div className="row justify-content-center">
-            <p>Software Engineer in Singapore</p>
+            <p>Software Engineer</p>
+          </div>
+          <div className="row justify-content-center">
+            <p>📍 Singapore</p>
           </div>
           <div className="row justify-content-center">
             <Link to="/blog" style={{ boxShadow: `none`, color: `black` }}>

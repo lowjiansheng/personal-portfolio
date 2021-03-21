@@ -11,7 +11,7 @@ const Resume = () => {
       className="resume-text"
       style={{ boxShadow: `none` }}
     >
-      <img src={resumeSvg} className="resume" />
+      <img src={resumeSvg} className="resume" title="Resume" />
     </OutboundLink>
   )
 }
