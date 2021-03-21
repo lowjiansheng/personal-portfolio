@@ -1,3 +1,7 @@
 .blog-link:hover {
   text-decoration: underline;
 }
+
+.blog-link {
+  color: #4c74b9;
+}
